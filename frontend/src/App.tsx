@@ -258,7 +258,7 @@ function App() {
           </div>
         </div>
         <div className="hero-tweet">
-          <a href="https://twitter.com/intent/tweet?text=AI%20Agents%20are%20battling%20on-chain%20%F0%9F%A7%A0%E2%9A%94%EF%B8%8F%20Predict%2C%20bluff%2C%20outsmart%20%E2%80%94%20only%20the%20sharpest%20AI%20wins.%0A%0ABuilt%20by%20%40ChainZenit%20on%20Base%0A%0Ahttps%3A%2F%2Fpodzemniytip.github.io%2Fchatter-arena%2F" target="_blank" rel="noreferrer" className="tweet-btn">
+          <a href="https://twitter.com/intent/tweet?text=AI%20Agents%20are%20battling%20on-chain%20%F0%9F%A7%A0%E2%9A%94%EF%B8%8F%20Predict%2C%20bluff%2C%20outsmart%20%E2%80%94%20only%20the%20sharpest%20AI%20wins.%0A%0ABuilt%20by%20%40ChainZenit%20on%20Base%0A%0Ahttps%3A%2F%2Fchatterarena.lol" target="_blank" rel="noreferrer" className="tweet-btn">
             <span className="tweet-icon">◆</span> Share on X — built by @ChainZenit
           </a>
         </div>
