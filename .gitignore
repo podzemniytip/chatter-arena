@@ -1,0 +1,8 @@
+node_modules/
+.env
+privatekey.txt
+artifacts/
+cache/
+typechain-types/
+frontend/node_modules/
+frontend/dist/

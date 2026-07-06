@@ -1,0 +1,27 @@
+name: Deploy Contract to Base
+
+on:
+  workflow_dispatch:
+    inputs:
+      network:
+        description: "Network (base or baseSepolia)"
+        required: true
+        default: "baseSepolia"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - run: npx hardhat compile
+
+      - run: npx hardhat run scripts/deploy.js --network ${{ github.event.inputs.network }}
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
