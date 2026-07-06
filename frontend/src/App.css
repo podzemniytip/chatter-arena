@@ -209,7 +209,39 @@ body {
   margin: 0 auto 30px;
 }
 
-.hero-cta { margin-bottom: 50px; }
+.hero-cta { margin-bottom: 40px; }
+
+.hero-tweet { margin-bottom: 20px; }
+
+.tweet-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text2);
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.tweet-btn:hover {
+  background: rgba(29, 161, 242, 0.1);
+  border-color: rgba(29, 161, 242, 0.3);
+  color: #1DA1F2;
+}
+
+.tweet-icon {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.tweet-btn:hover .tweet-icon { opacity: 1; }
 
 .hero-stats {
   display: flex;

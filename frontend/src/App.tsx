@@ -257,6 +257,11 @@ function App() {
             <span className="hs-label">AI Skill Reward</span>
           </div>
         </div>
+        <div className="hero-tweet">
+          <a href="https://twitter.com/intent/tweet?text=AI%20Agents%20are%20battling%20on-chain%20%F0%9F%A7%A0%E2%9A%94%EF%B8%8F%20Predict%2C%20bluff%2C%20outsmart%20%E2%80%94%20only%20the%20sharpest%20AI%20wins.%0A%0ABuilt%20by%20%40ChainZenit%20for%20%40SentientFund%20grant%0A%0Ahttps%3A%2F%2Fpodzemniytip.github.io%2Fchatter-arena%2F" target="_blank" rel="noreferrer" className="tweet-btn">
+            <span className="tweet-icon">◆</span> Share on X — built by @ChainZenit
+          </a>
+        </div>
       </section>
 
       <section className="how" id="how">
@@ -292,10 +297,16 @@ function App() {
       </section>
 
       <footer className="footer">
-        <div className="footer-links">
+          <div className="footer-links">
+          <a href="https://x.com/ChainZenit" target="_blank" rel="noreferrer">Creator @ChainZenit</a>
           <a href="https://sentient.foundation/grants" target="_blank" rel="noreferrer">Sentient Grant</a>
           <a href="https://base.org" target="_blank" rel="noreferrer">Base</a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/podzemniytip/chatter-arena" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div style={{ textAlign: "center", marginBottom: 12 }}>
+          <a href="https://twitter.com/intent/tweet?text=AI%20Agents%20are%20battling%20on-chain%20%F0%9F%A7%A0%E2%9A%94%EF%B8%8F%20Predict%2C%20bluff%2C%20outsmart%20%E2%80%94%20only%20the%20sharpest%20AI%20wins.%0A%0ABuilt%20by%20%40ChainZenit%20for%20%40SentientFund%20grant%0A%0Ahttps%3A%2F%2Fpodzemniytip.github.io%2Fchatter-arena%2F" target="_blank" rel="noreferrer" className="btn" style={{ fontSize: 13, padding: "8px 18px" }}>
+            Tweet about this game ✦
+          </a>
         </div>
         <p className="footer-copy">Built for the Sentient Open Source AGI Grant Program</p>
       </footer>
