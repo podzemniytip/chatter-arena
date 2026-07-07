@@ -1,7 +1,7 @@
-export const CHATTER_ADDRESS = "0x51062475c702655F3508b65f02C8c97de0ACe812";
+export const CHATTER_ADDRESS = "0xC637Df9eFc3c9C1a4E1e481630B79fD69497aC20";
 
 export const CHATTER_ABI = [
-  { inputs: [], stateMutability: "nonpayable", type: "constructor" },
+  { inputs: [{ internalType: "uint256", name: "_entryFee", type: "uint256" }, { internalType: "uint256", name: "_reg", type: "uint256" }, { internalType: "uint256", name: "_com", type: "uint256" }, { internalType: "uint256", name: "_rev", type: "uint256" }], stateMutability: "nonpayable", type: "constructor" },
   { anonymous: false, inputs: [{ indexed: true, internalType: "uint256", name: "season", type: "uint256" }, { indexed: false, internalType: "address", name: "winner", type: "address" }, { indexed: false, internalType: "uint256", name: "prize", type: "uint256" }, { indexed: false, internalType: "uint256", name: "fee", type: "uint256" }], name: "Claimed", type: "event" },
   { anonymous: false, inputs: [{ indexed: true, internalType: "uint256", name: "season", type: "uint256" }, { indexed: true, internalType: "address", name: "player", type: "address" }], name: "Committed", type: "event" },
   { anonymous: false, inputs: [{ indexed: true, internalType: "uint256", name: "season", type: "uint256" }, { indexed: false, internalType: "address", name: "winner", type: "address" }, { indexed: false, internalType: "uint256", name: "pool", type: "uint256" }], name: "Completed", type: "event" },
@@ -10,15 +10,18 @@ export const CHATTER_ABI = [
   { anonymous: false, inputs: [{ indexed: true, internalType: "uint256", name: "season", type: "uint256" }, { indexed: true, internalType: "address", name: "player", type: "address" }, { indexed: false, internalType: "uint8", name: "color", type: "uint8" }, { indexed: false, internalType: "uint8", name: "prediction", type: "uint8" }], name: "Revealed", type: "event" },
   { inputs: [], name: "FEE_BPS", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
   { inputs: [{ internalType: "uint256", name: "_seasonId", type: "uint256" }], name: "claim", outputs: [], stateMutability: "nonpayable", type: "function" },
+  { inputs: [], name: "comDuration", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
   { inputs: [{ internalType: "bytes32", name: "_commitment", type: "bytes32" }], name: "commit", outputs: [], stateMutability: "nonpayable", type: "function" },
   { inputs: [], name: "complete", outputs: [], stateMutability: "nonpayable", type: "function" },
   { inputs: [], name: "enter", outputs: [], stateMutability: "payable", type: "function" },
   { inputs: [{ internalType: "uint256", name: "_seasonId", type: "uint256" }, { internalType: "address", name: "_player", type: "address" }], name: "getPlayerData", outputs: [{ internalType: "bool", name: "", type: "bool" }, { internalType: "bool", name: "", type: "bool" }, { internalType: "uint8", name: "", type: "uint8" }, { internalType: "uint8", name: "", type: "uint8" }, { internalType: "uint8", name: "", type: "uint8" }], stateMutability: "view", type: "function" },
   { inputs: [{ internalType: "uint256", name: "_seasonId", type: "uint256" }], name: "getPlayers", outputs: [{ internalType: "address[]", name: "", type: "address[]" }], stateMutability: "view", type: "function" },
   { inputs: [], name: "owner", outputs: [{ internalType: "address", name: "", type: "address" }], stateMutability: "view", type: "function" },
+  { inputs: [], name: "regDuration", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
+  { inputs: [], name: "revDuration", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
   { inputs: [{ internalType: "uint8", name: "_color", type: "uint8" }, { internalType: "uint8", name: "_prediction", type: "uint8" }, { internalType: "bytes32", name: "_salt", type: "bytes32" }], name: "reveal", outputs: [], stateMutability: "nonpayable", type: "function" },
   { inputs: [], name: "seasonId", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
   { inputs: [{ internalType: "uint256", name: "", type: "uint256" }], name: "seasons", outputs: [{ internalType: "uint8", name: "phase", type: "uint8" }, { internalType: "uint256", name: "entryFee", type: "uint256" }, { internalType: "uint256", name: "regEnd", type: "uint256" }, { internalType: "uint256", name: "comEnd", type: "uint256" }, { internalType: "uint256", name: "revEnd", type: "uint256" }, { internalType: "uint256", name: "pool", type: "uint256" }, { internalType: "address", name: "winner", type: "address" }, { internalType: "bool", name: "claimed", type: "bool" }, { internalType: "uint8", name: "majority", type: "uint8" }], stateMutability: "view", type: "function" },
-  { inputs: [{ internalType: "uint256", name: "_fee", type: "uint256" }, { internalType: "uint256", name: "_regDuration", type: "uint256" }, { internalType: "uint256", name: "_comDuration", type: "uint256" }, { internalType: "uint256", name: "_revDuration", type: "uint256" }], name: "startSeason", outputs: [], stateMutability: "nonpayable", type: "function" },
+  { inputs: [{ internalType: "uint256", name: "_reg", type: "uint256" }, { internalType: "uint256", name: "_com", type: "uint256" }, { internalType: "uint256", name: "_rev", type: "uint256" }], name: "setDurations", outputs: [], stateMutability: "nonpayable", type: "function" },
   { inputs: [{ internalType: "uint256", name: "_seasonId", type: "uint256" }], name: "withdrawStuck", outputs: [], stateMutability: "nonpayable", type: "function" }
 ] as const;
